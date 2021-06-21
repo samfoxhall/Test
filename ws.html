@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
 <body>
-	t
-	<style type='text/css'>
+
+<h1 onLoad="startChatWithWindow()">My First Heading</h1>
+<p>My first paragraph.</p>
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -32,12 +37,12 @@
 
 		embedded_svc.init(
 			'https://cerberusllc--testsam.my.salesforce.com',
-			'https://testsam-cerberusftp.cs92.force.com/requestaquote',
+			'https://testsam-cerberusftp.cs92.force.com',
 			gslbBaseURL,
 			'00D3F000000KMYW',
-			'Request_a_quote',
+			'This_is_a_test',
 			{
-				
+
 			}
 		);
 	};
@@ -53,5 +58,5 @@
 		initESW('https://service.force.com');
 	}
 </script>
-	</body>
-</html> 
+</body>
+</html>
