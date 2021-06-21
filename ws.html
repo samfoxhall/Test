@@ -6,7 +6,7 @@
 </head>
 <body>
 	
-<h1 onLoad="startChatWithWindow()">My First Heading</h1>
+<h1 onLoad="myFunction()">My First Heading</h1>
 <p>My first paragraph.</p>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -20,6 +20,7 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
+	function myFunction() {
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -56,6 +57,7 @@
 		document.body.appendChild(s);
 	} else {
 		initESW('https://service.force.com');
+	}
 	}
 </script>
 </body>
