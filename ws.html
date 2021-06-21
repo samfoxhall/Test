@@ -20,7 +20,6 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	function myFunction() {
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -35,10 +34,10 @@
 
 		embedded_svc.settings.enabledFeatures = ['Flows'];
 		embedded_svc.settings.entryFeature = 'Flows';
-		embedded_svc.settings.autoOpenPostChat = true;
+
 		embedded_svc.init(
 			'https://cerberusllc--testsam.my.salesforce.com',
-			'https://testsam-cerberusftp.cs92.force.com',
+			'https://testsam-cerberusftp.cs92.force.com/requestaquote',
 			gslbBaseURL,
 			'00D3F000000KMYW',
 			'This_is_a_test',
@@ -48,16 +47,15 @@
 		);
 	};
 
-	//if (!window.embedded_svc) {
+	if (!window.embedded_svc) {
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://cerberusllc--testsam.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
 		document.body.appendChild(s);
-	//} else {
+	} else {
 		initESW('https://service.force.com');
-	//}
 	}
 </script>
 </body>
