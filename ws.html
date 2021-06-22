@@ -59,5 +59,14 @@
 		initESW('https://service.force.com');
 	}
 </script>
+<script>
+var observer = new MutationObserver(function (m) {
+console.log(m);
+  if (m[0].addedNodes[0].id === "helpButtonSpan")
+    console.log('hi');
+});
+
+observer.observe(document.body, {childList: true});
+</script>
 </body>
 </html>
