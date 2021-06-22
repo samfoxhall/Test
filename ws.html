@@ -54,10 +54,14 @@
 			initESW(null);
 		};
 		document.body.appendChild(s);
-		document.getElementByID('helpButtonSpan').click();
 
 	} else {
 		initESW('https://service.force.com');
+	}
+</script>
+<script>
+	function startChatWithWindow(){
+			document.getElementByID('helpButtonSpan').click();
 	}
 </script>
 </body>
