@@ -61,13 +61,17 @@
 </script>
 <script>
 var observer = new MutationObserver(function (m) {
-console.log(m);
+	try {
+	console.log(yes);
 	document.getElementById('helpButtonSpan').click();
 
-  if (m[0].addedNodes[0].id === "helpButtonSpan")
-    console.log('hi');
-});
+	}
+catch(err) {
+	console.log(m);
+}}
 
+	
+	
 observer.observe(document.body, {childList: true});
 </script>
 </body>
