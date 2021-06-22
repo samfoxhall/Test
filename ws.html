@@ -4,9 +4,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
-<body onload='alert("It's loaded!")'>
+<body>
 
-<h1 onLoad="startChatWithWindow()">My First Heading</h1>
+<h1>My First Heading</h1>
 <p>My first paragraph.</p>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -60,10 +60,8 @@
 	}
 </script>
 <script>
-	function startChatWithWindow(){
 			document.getElementByID('helpButtonSpan').click();
-	}
-window.addEventListener('load', function () {
+document.getElementByID('helpButtonSpan').addEventListener('load', function () {
   	alert("It's loaded!")
 })
 </script>
