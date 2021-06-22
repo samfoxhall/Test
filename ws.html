@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>My First Heading</h1>
+<h1 onLoad="startChatWithWindow()">My First Heading</h1>
 <p>My first paragraph.</p>
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -59,6 +59,10 @@
 		initESW('https://service.force.com');
 	}
 </script>
-
+<script>
+	function startChatWithWindow(){
+			document.getElementByID('helpButtonSpan').click();
+	}
+</script>
 </body>
 </html>
