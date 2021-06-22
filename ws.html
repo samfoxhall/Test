@@ -62,6 +62,8 @@
 <script>
 var observer = new MutationObserver(function (m) {
 console.log(m);
+	document.getElementById('helpButtonSpan').click();
+
   if (m[0].addedNodes[0].id === "helpButtonSpan")
     console.log('hi');
 });
